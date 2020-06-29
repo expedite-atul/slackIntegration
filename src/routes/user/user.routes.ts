@@ -35,7 +35,7 @@ class V1HomeRouteClass extends BaseRoute {
                     await HomeController.fethcHome(req, res, next);
                 } catch (error) {
                     console.error(`we have an error ==> ${error}`);
-                    next(error);
+                    throw error;
                 }
             }
         );

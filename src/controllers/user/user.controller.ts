@@ -25,38 +25,11 @@ class HomeClass extends BaseClass {
     async fethcHome(req: Request, res: Response, next: NextFunction): Promise<any> {
         try {
             return `hello`;
-        } catch (err) {
-            next(err);
+        } catch (error) {
+            console.error(`we have an error ==> ${error}`);
+            throw error;
         }
     }
-
-    // @ApiOperationPost({
-    //     description: "User Social Login",
-    //     path: '/socialLogin',
-    //     parameters: {
-
-    //         body: {
-    //             description: 'Body social login',
-    //             required: true,
-    //             model: 'ReqUserSocialLogin'
-    //         }
-    //     },
-    //     responses: {
-    //         200: {
-    //             description: "Success",
-    //             type: "String",
-    //         }
-    //     },
-    // })
-    // async userSocialLogin(req: Request, res: Response, next: NextFunction) {
-    //     try {
-
-    //         }
-
-    //     } catch (err) {
-    //         next(err);
-    //     }
-    // }
 
 }
 
